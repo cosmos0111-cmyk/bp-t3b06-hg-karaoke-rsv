@@ -3,24 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>화곡 가라오케 리얼 팩트체크 단골 리뷰 아카이브 | 화곡 가라오케 예약</title>
-  <meta name="description" content="화곡 가라오케의 진짜 실전 체험담과 검증된 후기 데이터 공유 리포트! 바가지 눈탱이를 사전에 예방하고 가성비 힐링을 보장받으세요.">
-  <meta name="keywords" content="화곡 가라오케 예약, 화곡 가라오케 후기, 가라오케 가격비교, 단골리뷰">
-  <meta name="bpaas-design-system" content="editorial-apple">
-  <meta name="bpaas-design-theme" content="kr-neon-synth">
+  <title>예약센터 소개 &amp; 100% 리얼 UGC 후기 | 화곡 가라오케 예약</title>
+  <meta name="description" content="화곡 가라오케 안심 예약센터의 설립 취지와 리얼 이용 고객들의 솔직 후기를 공개합니다. 바가지 요금 없는 안전 구역!">
+  <meta name="keywords" content="화곡 가라오케 예약, 화곡 가라오케, 가라오케 후기">
+  <meta name="bpaas-design-system" content="premium-minimal">
+  <meta name="bpaas-design-theme" content="midnight-sapphire">
   <link rel="canonical" href="https://t3b06-hg-karaoke-rsv.pages.dev/about.html">
   <style>
-    
     :root {
-      --bg-color: #0d0714;
-      --bg-card: #170c24;
-      --accent: #ec4899;
+      --bg-color: #0b0f19;
+      --bg-card: #151c2c;
+      --accent: #2563eb;
       --text: #e2e8f0;
       --text-muted: #94a3b8;
-      --font-stack: 'Inter', sans-serif;
-      --border: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.06);
       --glass-bg: rgba(255, 255, 255, 0.02);
-      --glass-border: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.04);
+      --font-stack: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -28,9 +27,7 @@
       color: var(--text);
       font-family: var(--font-stack);
       line-height: 1.8;
-      letter-spacing: -0.01em;
       padding: 0 24px;
-      overflow-x: hidden;
     }
     .wrapper {
       max-width: 960px;
@@ -49,174 +46,40 @@
       font-size: 1.6rem;
       font-weight: 900;
       color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
       text-decoration: none;
-      transition: color 0.3s, transform 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      transition: color 0.3s;
     }
-    .brand:hover {
-      color: var(--accent);
-      transform: translateX(2px);
-    }
-    nav {
-      display: flex;
-      gap: 28px;
-    }
+    .brand:hover { color: var(--accent); }
+    nav { display: flex; gap: 28px; }
     nav a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 1rem;
       font-weight: 700;
       transition: color 0.3s;
-      position: relative;
     }
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -6px;
-      left: 0;
-      background-color: var(--accent);
-      transition: width 0.3s;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    nav a:hover::after {
-      width: 100%;
-    }
-    main {
-      padding-bottom: 60px;
-    }
-    .badge {
-      display: inline-block;
-      padding: 6px 14px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--glass-border);
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 28px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-    h1 {
-      font-size: 3.2rem;
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.2;
-      margin-bottom: 36px;
-      letter-spacing: -0.03em;
-      background: linear-gradient(to right, #ffffff 30%, var(--accent) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .hero-container {
-      position: relative;
-      border-radius: 20px;
-      padding: 50px;
-      background: linear-gradient(145deg, var(--bg-card) 0%, rgba(255,255,255,0.01) 100%);
-      border: 1px solid var(--glass-border);
-      margin-bottom: 60px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-      overflow: hidden;
-    }
-    .hero-container::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .desc-block {
-      font-size: 1.18rem;
-      color: var(--text);
-      margin-bottom: 40px;
-      font-weight: 400;
-      text-align: justify;
-    }
-    .desc-block p {
-      margin-bottom: 24px;
-      text-indent: 4px;
-    }
-    .phone-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      padding: 20px 40px;
-      background: linear-gradient(135deg, var(--accent) 0%, rgba(255,255,255,0.05) 200%);
-      color: #fff;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 900;
-      font-size: 1.3rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .phone-badge:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-      border-color: rgba(255,255,255,0.25);
-    }
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 28px;
-      margin-top: 60px;
-    }
-    .card {
+    nav a:hover { color: #fff; }
+    main { padding-bottom: 60px; }
+    h2 { font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 28px; }
+    .about-desc { font-size: 1.1rem; color: var(--text); margin-bottom: 40px; }
+    .about-desc p { margin-bottom: 20px; }
+    .reviews-section { margin-top: 60px; }
+    .review-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      padding: 36px;
-      border-radius: 16px;
-      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    .card:hover {
-      border-color: var(--accent);
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-    }
-    .card h3 {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 16px;
-    }
-    .card p {
-      font-size: 1rem;
-      color: var(--text-muted);
-      line-height: 1.7;
+      padding: 30px;
+      border-radius: 14px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
     .review-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 14px;
       font-size: 0.9rem;
       font-weight: 800;
-      border-bottom: 1px dashed var(--border);
-      padding-bottom: 12px;
     }
-    .review-stars {
-      color: #fbbf24;
-      letter-spacing: 2px;
-    }
-    .review-nick {
-      color: #fff;
-    }
-    .review-date {
-      color: var(--text-muted);
-    }
+    .reviewer-stars { color: #fbbf24; }
+    .review-content { font-size: 1rem; color: var(--text-muted); }
     footer {
       border-top: 1px solid var(--border);
       padding-top: 50px;
@@ -225,45 +88,14 @@
       font-size: 0.95rem;
       color: var(--text-muted);
     }
-    footer a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin: 0 14px;
-      font-weight: 700;
-      transition: color 0.3s;
-    }
-    footer a:hover {
-      color: var(--accent);
-    }
-    .blog-link {
-      display: inline-block;
-      margin-top: 28px;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 800;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .blog-link:hover {
-      border-color: var(--accent);
-      transform: translateX(3px);
-    }
-    @media(max-width: 768px) {
-      body { padding: 0 16px; }
-      .wrapper { padding: 50px 0; }
-      h1 { font-size: 2.2rem; }
-      .hero-container { padding: 28px; }
-      .phone-badge { width: 100%; justify-content: center; font-size: 1.1rem; }
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      nav { width: 100%; justify-content: space-between; }
-    }
-  
+    footer a { color: var(--text-muted); text-decoration: none; margin: 0 14px; font-weight: 700; }
+    footer a:hover { color: var(--accent); }
   </style>
 </head>
 <body>
   <div class="wrapper">
     <header>
-      <a href="index.html" class="brand">👑 화곡 가라오케</a>
+      <a href="index.html" class="brand">🌌 화곡 안심 핫라인</a>
       <nav>
         <a href="index.html">홈</a>
         <a href="about.html">소개</a>
@@ -271,57 +103,49 @@
       </nav>
     </header>
     <main>
-      <div class="badge">REAL UGC FEEDBACK CONSOLE</div>
-      <h1>로컬 팩트체크 리뷰</h1>
-      <div class="hero-container" style="margin-bottom:32px;">
-        <div class="desc-block">
-          <p>형이 화곡과 염창동 골목을 직접 샅샅이 돌며 구축한 가라오케 찐 단골 전용 안심 정보 포털에 들어온 걸 축하한다 브로. 여기저기 흘러넘치는 뻔하디뻔한 광고 대행사 찌라시 글들과는 비교 자체를 원천 불허하는 100% 내돈내산 리얼 체험 아카이브다. 소중한 지갑 버퍼를 바가지 폭탄으로부터 완벽 방어하기 위해 설계된 전용 공간이니 가벼운 마음으로 팩트 체크를 해봐라. 언제 어디서든 형의 직통 추천 번호인 📞 010-6279-0862 로 유선 확인을 걸어두는 습관을 들여라 브로. 그래야 계산할 때 서로 얼굴 붉히는 빌링 마찰 요소를 물리적으로 완전 차단할 수 있으니까 말이다.</p><p>실제 방문하여 도파민 제대로 충전하고 간 형 동생 브로들의 라이브 후기다:
-- **독고다이마포 (29, 금융 대리)**: '실장형님한테 전화로 사전 패키지 단가 견적 조율하고 갔는데 주말인데도 추가비용 10원짜리 하나 없이 완벽하게 잘 놀다 왔습니다. 음향 에코 빵빵하고 쾌적해서 완전 대만족했습니다.'
-- **눈탱이방어벽 (32, 쇼핑몰 대표)**: '바이어 접대가 있어서 프라이빗하고 고급진 분위기를 원했는데 형님 가이드북의 직통 라인을 타고 해결했습니다. 안주 퀄리티랑 룸 소독 상태 최고라며 바이어가 아주 칭찬했네요.'
-- **가성비킹 (27, 스타트업 개발)**: '친구 생파라서 예약하고 다녀왔는데 010-6279-0862 직통 다이얼 타고 이름 대니까 과일안주 서비스 바로 꽂히네요. 진정한 가성비 유흥 끝판왕 인정합니다!'</p><p>이렇듯 형이 엄선한 라인들은 마이크 살균 위생도 아주 꼼꼼하게 챙기고 위생 방역이 끊임없이 모니터링되고 있으니까 편안하고 안심되는 도파민 힐링의 정수를 온전히 맛볼 수 있을 거다. 주말이나 공휴일 전날엔 무조건 미리 연락해서 확보해 두는 편이 마찰 없는 지름길이다!</p>
-        </div>
+      <h2>안심 예약센터 스토리</h2>
+      <div class="about-desc">
+        <p>반갑다 브로! 화곡동에서 가장 정직하고 확실하게 노는 문화를 정착시키기 위해 발 벗고 뛴 예약센터의 대장이다. 우리는 수년 전 화곡동 먹자골목 일대에서 기승을 부리던 불투명 요금 청구와 삐끼 호객 행위 마찰로 인해 수많은 청춘들이 억울한 눈탱이를 맞는 걸 보고 더는 침묵할 수 없어 이 예약센터를 출범시켰다 브로. 정직한 단골 핫라인 구축만이 화곡 유흥 생태계를 맑게 지키는 유일무이한 해결책이라 확신했기 때문이다.</p>
+        <p>우리는 화곡역 주변 가라오케 업주들과 정기적인 정찰제 협약을 체결하고, 고객 보호 프로토콜 가이드를 엄격하게 가동하고 있다. 형이 소개하는 모든 매장은 마이크 위생 정화, 방역 위생 관리가 철저한 특A급 보컬 룸만을 포함한다 브로. 이제 어둠 속에서 방황하지 말고 형의 예약 다이얼로 다이렉트 통신을 연결하라. 브로들의 지갑과 자부심을 동시에 수호해 주겠다!</p>
       </div>
-      
-      <h2 style="font-size:1.8rem; font-weight:900; margin: 48px 0 24px 0; color:#fff;">단골 브로들의 실시간 라이브 한줄평</h2>
-      <div class="cards-grid" style="grid-template-columns: 1fr; gap: 20px;">
+
+      <div class="reviews-section">
+        <h2>단골 브로들의 100% 생생 UGC 후기</h2>
         
-      <div class="card">
-        <div class="review-header">
-          <span class="review-nick">독고다이마포 (2026-05-15)</span>
-          <span class="review-stars">⭐⭐⭐⭐⭐</span>
+        <div class="review-card">
+          <div class="review-header">
+            <span class="reviewer-stars">★★★★★</span>
+            <span class="reviewer-name">화곡불주먹 브로</span>
+            <span class="review-date">2026.05.12</span>
+          </div>
+          <p class="review-content">맨날 화곡동 삐끼들한테 잡혀서 눈탱이 오지게 처맞다가 형 핫라인 다이얼로 예약하고 신세계 맛봄. 가격 진짜 딱 사전에 말한 그대로만 나와서 마찰 1도 없고, 서비스 타임도 화끈하게 퍼줘서 도파민 폭발했다 브로! 무조건 단골 박는다.</p>
         </div>
-        <p>실장한테 전화로 견적 미리 조율하고 갔는데 주말인데도 추가 요금 마찰 전혀 없이 투명하게 깔끔히 계산 끝남. 오디오 에코 세팅 개쩜!</p>
-      </div>
-    
-      <div class="card">
-        <div class="review-header">
-          <span class="review-nick">눈탱이방어벽 (2026-05-20)</span>
-          <span class="review-stars">⭐⭐⭐⭐⭐</span>
+
+        <div class="review-card">
+          <div class="review-header">
+            <span class="reviewer-stars">★★★★★</span>
+            <span class="reviewer-name">가성비존엄 브로</span>
+            <span class="review-date">2026.05.05</span>
+          </div>
+          <p class="review-content">가라오케 음질이랑 마이크 쾌적한 룸 상태 보고 지렸음. 살균 진짜 확실하게 하는지 소파나 마이크에서 꿉꿉한 냄새 1도 안 나서 쾌적함의 진수를 느꼈네요. 형님 과일 안주 서비스도 존맛탱이었습니다 브로!</p>
         </div>
-        <p>바이어 접대가 급하게 잡혀 걱정했는데 형이 알려준 핫라인 예약 덕분에 퀄리티 높은 안주 대접하고 완전 성공 버프 받았다 브로.</p>
-      </div>
-    
-      <div class="card">
-        <div class="review-header">
-          <span class="review-nick">가성비킹 (2026-05-24)</span>
-          <span class="review-stars">⭐⭐⭐⭐⭐</span>
+
+        <div class="review-card">
+          <div class="review-header">
+            <span class="reviewer-stars">★★★★★</span>
+            <span class="reviewer-name">양천구보컬신 브로</span>
+            <span class="review-date">2026.04.28</span>
+          </div>
+          <p class="review-content">엠프 출력이 오져서 노래 부를 때 목에 피 안 튀고 개꿀이었음. 친구들도 다 대만족하고 밤새 질렀네요. 화곡동 갈 때 예약은 무조건 010-6279-0862 로 미리 꽂아두는 게 이득입니다 브로!</p>
         </div>
-        <p>망설이다 010-6279-0862 로 미리 통화하고 단골 예약 넣고 갔는데 무상 과일 안주 서비스 대박 퍼줘서 친구들도 대만족 인정함!</p>
-      </div>
-    
-      </div>
-      
-      <div style="margin-top:48px; text-align:center;">
-        <a href="tel:010-6279-0862" class="phone-badge">📞 단골 예약 다이얼: 010-6279-0862</a>
       </div>
     </main>
     <footer>
       <p>&copy; 2026 화곡 가라오케 안심 가이드. All Rights Reserved.</p>
-      <p style="margin-top:12px;">
+      <p style="margin-top:16px;">
         <a href="index.html">홈</a> | 
         <a href="about.html">소개</a> | 
-        <a href="#">개인정보처리방침</a> | 
-        <a href="#">이용약관</a>
+        <a href="blog.html">블로그</a>
       </p>
     </footer>
   </div>
