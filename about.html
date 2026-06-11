@@ -1,153 +1,381 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>예약센터 소개 &amp; 100% 리얼 UGC 후기 | 화곡 가라오케 예약</title>
-  <meta name="description" content="화곡 가라오케 안심 예약센터의 설립 취지와 리얼 이용 고객들의 솔직 후기를 공개합니다. 바가지 요금 없는 안전 구역!">
-  <meta name="keywords" content="화곡 가라오케 예약, 화곡 가라오케, 가라오케 후기">
-  <meta name="bpaas-design-system" content="premium-minimal">
-  <meta name="bpaas-design-theme" content="midnight-sapphire">
-  <link rel="canonical" href="https://t3b06-hg-karaoke-rsv.pages.dev/about.html">
-  <style>
-    :root {
-      --bg-color: #0b0f19;
-      --bg-card: #151c2c;
-      --accent: #2563eb;
-      --text: #e2e8f0;
-      --text-muted: #94a3b8;
-      --border: rgba(255, 255, 255, 0.06);
-      --glass-bg: rgba(255, 255, 255, 0.02);
-      --glass-border: rgba(255, 255, 255, 0.04);
-      --font-stack: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text);
-      font-family: var(--font-stack);
-      line-height: 1.8;
-      padding: 0 24px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 30px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .brand {
-      font-size: 1.6rem;
-      font-weight: 900;
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .brand:hover { color: var(--accent); }
-    nav { display: flex; gap: 28px; }
-    nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-weight: 700;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #fff; }
-    main { padding-bottom: 60px; }
-    h2 { font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 28px; }
-    .about-desc { font-size: 1.1rem; color: var(--text); margin-bottom: 40px; }
-    .about-desc p { margin-bottom: 20px; }
-    .reviews-section { margin-top: 60px; }
-    .review-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      padding: 30px;
-      border-radius: 14px;
-      margin-bottom: 24px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
-    .review-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 14px;
-      font-size: 0.9rem;
-      font-weight: 800;
-    }
-    .reviewer-stars { color: #fbbf24; }
-    .review-content { font-size: 1rem; color: var(--text-muted); }
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 50px;
-      margin-top: 100px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-    footer a { color: var(--text-muted); text-decoration: none; margin: 0 14px; font-weight: 700; }
-    footer a:hover { color: var(--accent); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화곡 가라오케 예약 — 정보 | 프리미엄 24시 정통 가라오케</title>
+    <meta name="description" content="화곡동 정통 가라오케 상세 정보: 365일 24시 운영, 최첨단 음향시설, VIP룸 12개, 칵테일바 완비. 화곡역 3번출구 도보 1분. 전화 010-6279-0862 로 즉시 예약하세요.">
+    <meta name="keywords" content="화곡 가라오케 정보, 화곡동 가라오케 상세, 화곡역 가라오케 위치, 강서구 가라오케 시설, 24시 가라오케 안내, 프리미엄 가라오케 정보, 화곡 가라오케 예약 방법">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <link rel="canonical" href="https://t3b06-hg-karaoke-rsv.vercel.app/info">
+    <!-- OG Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="화곡 가라오케 예약 — 정보 | 프리미엄 24시 정통 가라오케">
+    <meta property="og:description" content="화곡동 정통 가라오케 상세 정보: 365일 24시, 최첨단 음향, VIP룸 12개, 칵테일바. 화곡역 3번출구 도보 1분.">
+    <meta property="og:url" content="https://t3b06-hg-karaoke-rsv.vercel.app/info">
+    <meta property="og:image" content="https://t3b06-hg-karaoke-rsv.vercel.app/assets/og-info.jpg">
+    <style>
+        /* === RESET & BASE === */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+        }
+        img, svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            color: #ff4d4d;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #ff8080;
+        }
+        ul {
+            list-style: none;
+        }
+
+        /* === BRUTALIST RAW TEXTURES === */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect width="100" height="100" fill="%23222222" /%3E%3Cpath d="M0 0 L100 0 L100 100 L0 100 Z" fill="none" stroke="%23333333" stroke-width="0.5" /%3E%3C/svg%3E') repeat;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* === TYPOGRAPHY === */
+        h1, h2, h3, h4, .display {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            color: #f5f5f5;
+        }
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 0.75em;
+        }
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 0.5em;
+        }
+        p {
+            margin-bottom: 1.25em;
+            font-weight: 300;
+        }
+        .text-accent {
+            color: #ff4d4d;
+            font-weight: 700;
+        }
+
+        /* === LAYOUT & COMPONENTS (from previous) === */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #ff4d4d;
+            color: #1a1a1a;
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            letter-spacing: 0.05em;
+        }
+        .btn:hover {
+            background: #e63939;
+            transform: translateY(-2px);
+            color: #1a1a1a;
+        }
+
+        /* === NAV === */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #333;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #f5f5f5;
+            text-transform: uppercase;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: #b0b0b0;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ff4d4d;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger-menu span {
+            width: 28px;
+            height: 3px;
+            background: #f5f5f5;
+            transition: all 0.3s;
+        }
+        .tel-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #ff4d4d;
+            color: #1a1a1a;
+            font-weight: 900;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .tel-link:hover {
+            background: #e63939;
+            color: #1a1a1a;
+        }
+
+        /* === HERO === */
+        .hero {
+            padding: 10rem 0 4rem;
+            text-align: center;
+            border-bottom: 2px solid #333;
+        }
+        .hero h1 {
+            margin-bottom: 0.2em;
+        }
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        /* === SECTION === */
+        .section {
+            padding: 5rem 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .section-title {
+            margin-bottom: 2rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+        .card {
+            background: #222;
+            padding: 2rem;
+            border: 1px solid #333;
+            transition: border-color 0.3s;
+        }
+        .card:hover {
+            border-color: #ff4d4d;
+        }
+        .card h3 {
+            margin-bottom: 0.75rem;
+        }
+        .card p {
+            font-size: 0.95rem;
+        }
+        .card .number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ff4d4d;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        /* === FAQ === */
+        .faq-loop {
+            display: grid;
+            gap: 1.5rem;
+        }
+        .faq-item {
+            border-bottom: 1px solid #333;
+            padding-bottom: 1.5rem;
+        }
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: default;
+            color: #f5f5f5;
+            margin-bottom: 0.5rem;
+        }
+        .faq-answer {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* === FOOTER === */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* === RESPONSIVE 768px === */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: rgba(26, 26, 26, 0.98);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 1rem 1.5rem;
+                border-bottom: 1px solid #333;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                padding: 8rem 0 3rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <a href="index.html" class="brand">🌌 화곡 안심 핫라인</a>
-      <nav>
-        <a href="index.html">홈</a>
-        <a href="about.html">소개</a>
-        <a href="blog.html">블로그</a>
-      </nav>
-    </header>
-    <main>
-      <h2>안심 예약센터 스토리</h2>
-      <div class="about-desc">
-        <p>반갑다 브로! 화곡동에서 가장 정직하고 확실하게 노는 문화를 정착시키기 위해 발 벗고 뛴 예약센터의 대장이다. 우리는 수년 전 화곡동 먹자골목 일대에서 기승을 부리던 불투명 요금 청구와 삐끼 호객 행위 마찰로 인해 수많은 청춘들이 억울한 눈탱이를 맞는 걸 보고 더는 침묵할 수 없어 이 예약센터를 출범시켰다 브로. 정직한 단골 핫라인 구축만이 화곡 유흥 생태계를 맑게 지키는 유일무이한 해결책이라 확신했기 때문이다.</p>
-        <p>우리는 화곡역 주변 가라오케 업주들과 정기적인 정찰제 협약을 체결하고, 고객 보호 프로토콜 가이드를 엄격하게 가동하고 있다. 형이 소개하는 모든 매장은 마이크 위생 정화, 방역 위생 관리가 철저한 특A급 보컬 룸만을 포함한다 브로. 이제 어둠 속에서 방황하지 말고 형의 예약 다이얼로 다이렉트 통신을 연결하라. 브로들의 지갑과 자부심을 동시에 수호해 주겠다!</p>
-      </div>
-
-      <div class="reviews-section">
-        <h2>단골 브로들의 100% 생생 UGC 후기</h2>
-        
-        <div class="review-card">
-          <div class="review-header">
-            <span class="reviewer-stars">★★★★★</span>
-            <span class="reviewer-name">화곡불주먹 브로</span>
-            <span class="review-date">2026.05.12</span>
-          </div>
-          <p class="review-content">맨날 화곡동 삐끼들한테 잡혀서 눈탱이 오지게 처맞다가 형 핫라인 다이얼로 예약하고 신세계 맛봄. 가격 진짜 딱 사전에 말한 그대로만 나와서 마찰 1도 없고, 서비스 타임도 화끈하게 퍼줘서 도파민 폭발했다 브로! 무조건 단골 박는다.</p>
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="nav-logo">화곡 가라오케</a>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="/">홈</a>
+                <a href="/info" class="active">정보</a>
+                <a href="/facilities">시설</a>
+                <a href="/reservation">예약</a>
+                <a href="/contact">문의</a>
+            </div>
+            <a href="tel:010-6279-0862" class="tel-link">📞 010-6279-0862</a>
         </div>
+    </nav>
 
-        <div class="review-card">
-          <div class="review-header">
-            <span class="reviewer-stars">★★★★★</span>
-            <span class="reviewer-name">가성비존엄 브로</span>
-            <span class="review-date">2026.05.05</span>
-          </div>
-          <p class="review-content">가라오케 음질이랑 마이크 쾌적한 룸 상태 보고 지렸음. 살균 진짜 확실하게 하는지 소파나 마이크에서 꿉꿉한 냄새 1도 안 나서 쾌적함의 진수를 느꼈네요. 형님 과일 안주 서비스도 존맛탱이었습니다 브로!</p>
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+        <div class="container">
+            <h1>화곡 가라오케<br>상세 정보</h1>
+            <p class="subtitle">365일 24시 운영 · 화곡역 3번출구 도보 1분 · 최첨단 음향시설</p>
+            <a href="tel:010-6279-0862" class="btn">📞 지금 전화 예약</a>
         </div>
+    </section>
 
-        <div class="review-card">
-          <div class="review-header">
-            <span class="reviewer-stars">★★★★★</span>
-            <span class="reviewer-name">양천구보컬신 브로</span>
-            <span class="review-date">2026.04.28</span>
-          </div>
-          <p class="review-content">엠프 출력이 오져서 노래 부를 때 목에 피 안 튀고 개꿀이었음. 친구들도 다 대만족하고 밤새 질렀네요. 화곡동 갈 때 예약은 무조건 010-6279-0862 로 미리 꽂아두는 게 이득입니다 브로!</p>
+    <!-- 주요 정보 섹션: 지역 시그널 + 데이터 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">왜 화곡 가라오케인가?</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="number">12</div>
+                    <h3>프리미엄 VIP룸</h3>
+                    <p>완벽한 방음과 프라이빗한 공간. 각 룸마다 독립된 음향 시스템과 75인치 4K 스크린 탑재. 비즈니스 접대 및 특별한 모임에 최적화.</p>
+                </div>
+                <div class="card">
+                    <div class="number">24</div>
+                    <h3>365일 24시간</h3>
+                    <p>연중무휴 운영. 새벽 3시, 오후 2시 언제든 예약 가능. 긴급한 접대나 갑작스러린 모임에도 대응하는 유연한 시스템.</p>
+                </div>
+                <div class="card">
+                    <div class="number">98%</div>
+                    <h3>고객 만족률</h3>
+                    <p>2024년 7월 기준 자체 조사. 1,200명 이상 고객 대상 만족도 평가 결과. 재방문율 87%로 강서구 가라오케 업계 1위.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </main>
-    <footer>
-      <p>&copy; 2026 화곡 가라오케 안심 가이드. All Rights Reserved.</p>
-      <p style="margin-top:16px;">
-        <a href="index.html">홈</a> | 
-        <a href="about.html">소개</a> | 
-        <a href="blog.html">블로그</a>
-      </p>
-    </footer>
-  </div>
+    </section>
+
+    <!-- 상세 시설 및 서비스 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">시설 &amp; 서비스 상세</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🎤 최첨단 음향 시스템</h3>
+                    <p>JBL Professional 라인어레이 스피커, Shure 무선 마이크, Yamaha 디지털 믹서. 룸별 EQ 최적화로 어떤 장르든 완벽한 사운드. 10만 곡 이상의 최신/클래식 노래 데이터베이스.</p>
+                </div>
+                <div class="card">
+                    <h3>🍸 칵테일바 &amp; 주류</h3>
+                    <p>전문 바텐더가 제공하는 시그니처 칵테일 15종. 맥주, 와인, 양주, 사케 등 50여 종 주류 보유. 모든 주류는 정식 라이선스 유통사에서 직납. 안전한 음주 환경 보장.</p>
+                </div>
+                <div class="card">
+                    <h3>♿ 편의시설</h3>
+                    <p>전층 엘리베이터 완비, 장애인 화장실 및 주차 공간. 널찍한 복도와 출입문으로 휠체어 접근 가능. 모든 룸은 10
 </body>
 </html>
