@@ -1,381 +1,73 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="midnight" data-build="d3e5f6a1">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>화곡 가라오케 예약 — 정보 | 프리미엄 24시 정통 가라오케</title>
-    <meta name="description" content="화곡동 정통 가라오케 상세 정보: 365일 24시 운영, 최첨단 음향시설, VIP룸 12개, 칵테일바 완비. 화곡역 3번출구 도보 1분. 전화 010-6279-0862 로 즉시 예약하세요.">
-    <meta name="keywords" content="화곡 가라오케 정보, 화곡동 가라오케 상세, 화곡역 가라오케 위치, 강서구 가라오케 시설, 24시 가라오케 안내, 프리미엄 가라오케 정보, 화곡 가라오케 예약 방법">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <link rel="canonical" href="https://t3b06-hg-karaoke-rsv.vercel.app/info">
-    <!-- OG Meta -->
+    <title>화곡 가라오케 예약 – 상세 정보</title>
+    <meta name="description" content="화곡 지역 가라오케 예약 시 현장 담당자가 반드시 검토해야 할 연락 체계, 인원 변동 대응 방안, 마무리 정산 절차를 전문가 시각에서 정리한 종합 가이드입니다.">
+    <meta name="keywords" content="화곡 가라오케, 가라오케 예약, 현장 준비, 인원 관리, 정산 절차, 연락 체계">
+    <link rel="canonical" href="https://hwagok-song-tip.link-hub.org/about.html">
+    <meta property="og:title" content="화곡 가라오케 예약 – 상세 정보">
+    <meta property="og:description" content="현장 담당자를 위한 화곡 가라오케 예약 전 체크리스트와 운영 매뉴얼.">
+    <meta property="og:url" content="https://hwagok-song-tip.link-hub.org/about.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="화곡 가라오케 예약 — 정보 | 프리미엄 24시 정통 가라오케">
-    <meta property="og:description" content="화곡동 정통 가라오케 상세 정보: 365일 24시, 최첨단 음향, VIP룸 12개, 칵테일바. 화곡역 3번출구 도보 1분.">
-    <meta property="og:url" content="https://t3b06-hg-karaoke-rsv.vercel.app/info">
-    <meta property="og:image" content="https://t3b06-hg-karaoke-rsv.vercel.app/assets/og-info.jpg">
-    <style>
-        /* === RESET & BASE === */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            font-size: 16px;
-            -webkit-text-size-adjust: 100%;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #1a1a1a;
-            color: #e0e0e0;
-            line-height: 1.6;
-            min-height: 100vh;
-            position: relative;
-        }
-        img, svg {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        a {
-            color: #ff4d4d;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #ff8080;
-        }
-        ul {
-            list-style: none;
-        }
-
-        /* === BRUTALIST RAW TEXTURES === */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect width="100" height="100" fill="%23222222" /%3E%3Cpath d="M0 0 L100 0 L100 100 L0 100 Z" fill="none" stroke="%23333333" stroke-width="0.5" /%3E%3C/svg%3E') repeat;
-            opacity: 0.08;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* === TYPOGRAPHY === */
-        h1, h2, h3, h4, .display {
-            font-family: 'Noto Sans KR', sans-serif;
-            font-weight: 900;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-            color: #f5f5f5;
-        }
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            text-transform: uppercase;
-            margin-bottom: 0.5em;
-        }
-        h2 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 0.75em;
-        }
-        h3 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            margin-bottom: 0.5em;
-        }
-        p {
-            margin-bottom: 1.25em;
-            font-weight: 300;
-        }
-        .text-accent {
-            color: #ff4d4d;
-            font-weight: 700;
-        }
-
-        /* === LAYOUT & COMPONENTS (from previous) === */
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: #ff4d4d;
-            color: #1a1a1a;
-            font-weight: 900;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
-            letter-spacing: 0.05em;
-        }
-        .btn:hover {
-            background: #e63939;
-            transform: translateY(-2px);
-            color: #1a1a1a;
-        }
-
-        /* === NAV === */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(26, 26, 26, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #333;
-            z-index: 1000;
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 1.5rem;
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: #f5f5f5;
-            text-transform: uppercase;
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        .nav-links a {
-            color: #b0b0b0;
-            font-weight: 500;
-            font-size: 0.95rem;
-            letter-spacing: 0.05em;
-        }
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #ff4d4d;
-        }
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-        .hamburger-menu span {
-            width: 28px;
-            height: 3px;
-            background: #f5f5f5;
-            transition: all 0.3s;
-        }
-        .tel-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: #ff4d4d;
-            color: #1a1a1a;
-            font-weight: 900;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            transition: background 0.3s;
-        }
-        .tel-link:hover {
-            background: #e63939;
-            color: #1a1a1a;
-        }
-
-        /* === HERO === */
-        .hero {
-            padding: 10rem 0 4rem;
-            text-align: center;
-            border-bottom: 2px solid #333;
-        }
-        .hero h1 {
-            margin-bottom: 0.2em;
-        }
-        .hero .subtitle {
-            font-size: 1.2rem;
-            color: #b0b0b0;
-            letter-spacing: 0.05em;
-            margin-bottom: 1.5rem;
-        }
-
-        /* === SECTION === */
-        .section {
-            padding: 5rem 0;
-            border-bottom: 1px solid #2a2a2a;
-        }
-        .section-title {
-            margin-bottom: 2rem;
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        .grid-3 {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2rem;
-        }
-        .card {
-            background: #222;
-            padding: 2rem;
-            border: 1px solid #333;
-            transition: border-color 0.3s;
-        }
-        .card:hover {
-            border-color: #ff4d4d;
-        }
-        .card h3 {
-            margin-bottom: 0.75rem;
-        }
-        .card p {
-            font-size: 0.95rem;
-        }
-        .card .number {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #ff4d4d;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        /* === FAQ === */
-        .faq-loop {
-            display: grid;
-            gap: 1.5rem;
-        }
-        .faq-item {
-            border-bottom: 1px solid #333;
-            padding-bottom: 1.5rem;
-        }
-        .faq-question {
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: default;
-            color: #f5f5f5;
-            margin-bottom: 0.5rem;
-        }
-        .faq-answer {
-            color: #b0b0b0;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* === FOOTER === */
-        footer {
-            padding: 3rem 0;
-            text-align: center;
-            border-top: 1px solid #333;
-            color: #666;
-            font-size: 0.85rem;
-        }
-
-        /* === RESPONSIVE 768px === */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background: rgba(26, 26, 26, 0.98);
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                padding: 1rem 1.5rem;
-                border-bottom: 1px solid #333;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .hamburger-menu {
-                display: flex;
-            }
-            .grid-2, .grid-3 {
-                grid-template-columns: 1fr;
-            }
-            .hero {
-                padding: 8rem 0 3rem;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 네비게이션 -->
-    <nav>
-        <div class="nav-container">
-            <a href="/" class="nav-logo">화곡 가라오케</a>
-            <div class="hamburger-menu" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="nav-links" id="navLinks">
-                <a href="/">홈</a>
-                <a href="/info" class="active">정보</a>
-                <a href="/facilities">시설</a>
-                <a href="/reservation">예약</a>
-                <a href="/contact">문의</a>
-            </div>
-            <a href="tel:010-6279-0862" class="tel-link">📞 010-6279-0862</a>
+    <header>
+        <div class="x-body-589j">
+            <nav>
+                <a href="/home">홈</a>
+                <a href="/overview">개요</a>
+                <a href="/info">정보</a>
+                <a href="/faq">FAQ</a>
+                <a href="/contact">연락처</a>
+                <div class="menu-toggle">☰</div>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- 히어로 섹션 -->
-    <section class="hero">
-        <div class="container">
-            <h1>화곡 가라오케<br>상세 정보</h1>
-            <p class="subtitle">365일 24시 운영 · 화곡역 3번출구 도보 1분 · 최첨단 음향시설</p>
-            <a href="tel:010-6279-0862" class="btn">📞 지금 전화 예약</a>
-        </div>
+    <section data-v="intro">
+        <h1>화곡 가라오케 예약 – 상세 정보</h1>
+        <p class="drop-cap">화곡 지역에서 가라오케를 예약하려는 기업·단체 담당자는 현장 운영의 효율성을 극대화하기 위해 사전 점검 항목을 체계적으로 관리해야 합니다. 본 페이지에서는 예약 전 단계부터 사후 정산까지 담당자가 반드시 확인하고 적용해야 할 핵심 절차와 체크포인트를 상세히 제시합니다.</p>
+        <p>각 항목은 현장의 실제 운영 상황을 반영하여 설계되었으며, 인원 변동, 사용 목적, 예약 시점에 따라 적용되는 세부 기준을 포함하고 있습니다. 이를 통해 현장 담당자는 불확실성을 최소화하고, 고객 만족도와 매출 안정성을 동시에 확보할 수 있습니다.</p>
     </section>
 
-    <!-- 주요 정보 섹션: 지역 시그널 + 데이터 -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">왜 화곡 가라오케인가?</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <div class="number">12</div>
-                    <h3>프리미엄 VIP룸</h3>
-                    <p>완벽한 방음과 프라이빗한 공간. 각 룸마다 독립된 음향 시스템과 75인치 4K 스크린 탑재. 비즈니스 접대 및 특별한 모임에 최적화.</p>
-                </div>
-                <div class="card">
-                    <div class="number">24</div>
-                    <h3>365일 24시간</h3>
-                    <p>연중무휴 운영. 새벽 3시, 오후 2시 언제든 예약 가능. 긴급한 접대나 갑작스러린 모임에도 대응하는 유연한 시스템.</p>
-                </div>
-                <div class="card">
-                    <div class="number">98%</div>
-                    <h3>고객 만족률</h3>
-                    <p>2024년 7월 기준 자체 조사. 1,200명 이상 고객 대상 만족도 평가 결과. 재방문율 87%로 강서구 가라오케 업계 1위.</p>
-                </div>
-            </div>
-        </div>
+    <section data-v="contact-system" class="card">
+        <h2>연락 체계 및 비상 대응</h2>
+        <p>가라오케 현장에서는 예약 전·후에 여러 이해관계자와의 신속한 소통이 필수적입니다. 기본 연락 창구는 대표 전화와 운영 매니저 전용 메신저이며, 비상 상황을 대비해 24시간 대응 가능한 대체 번호를 사전에 등록해 두어야 합니다.</p>
+        <p>연락 체계 구축 시 고려해야 할 항목은 다음과 같습니다. 첫째, 연락 담당자별 역할 정의(예: 예약 담당, 현장 운영, 회계 담당). 둘째, 연락 수단별 가용 시간 및 응답 SLA(서비스 수준 계약)를 명문화. 셋째, 비상 시 알림 흐름도(예: 현장 사고 → 매니저 → 본사 → 고객) 를 시각화해 모든 팀원이 동일한 절차를 따르도록 합니다.</p>
+        <p>또한, 예약 당일에는 현장 담당자가 고객과 직접 연결될 수 있도록 현장 전용 단축 URL을 제공하고, 예약 전날에는 확인 문자와 함께 담당자 연락처를 재전송합니다. 이러한 사전 조치는 오해와 일정 충돌을 방지하고, 현장 운영 중 발생할 수 있는 돌발 상황에 대한 대응력을 크게 향상시킵니다.</p>
     </section>
 
-    <!-- 상세 시설 및 서비스 -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">시설 &amp; 서비스 상세</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>🎤 최첨단 음향 시스템</h3>
-                    <p>JBL Professional 라인어레이 스피커, Shure 무선 마이크, Yamaha 디지털 믹서. 룸별 EQ 최적화로 어떤 장르든 완벽한 사운드. 10만 곡 이상의 최신/클래식 노래 데이터베이스.</p>
-                </div>
-                <div class="card">
-                    <h3>🍸 칵테일바 &amp; 주류</h3>
-                    <p>전문 바텐더가 제공하는 시그니처 칵테일 15종. 맥주, 와인, 양주, 사케 등 50여 종 주류 보유. 모든 주류는 정식 라이선스 유통사에서 직납. 안전한 음주 환경 보장.</p>
-                </div>
-                <div class="card">
-                    <h3>♿ 편의시설</h3>
-                    <p>전층 엘리베이터 완비, 장애인 화장실 및 주차 공간. 널찍한 복도와 출입문으로 휠체어 접근 가능. 모든 룸은 10
+    <section data-v="personnel-management" class="card">
+        <h2>인원 변동 대비 방안</h2>
+        <p>가라오케 예약 시 인원 수는 사전 예측과는 달리 현장에서 변동될 가능성이 높습니다. 따라서 인원 변동 관리 프로세스를 사전에 정의해 두어야 합니다. 기본 방안은 다음과 같습니다.</p>
+        <p>첫째, 예약 시 최소·최대 인원 기준을 명시하고, 초과 인원 발생 시 추가 요금 적용 기준을 사전에 고지합니다. 둘째, 인원 변동시 실시간 업데이트를 위한 전용 구글 스프레드시트 또는 사내 ERP 연동 폼을 운영합니다. 셋째, 인원 변동 알림은 예약 담당자와 현장 매니저에게 동시에 전송되도록 자동화 스크립트를 구성합니다.</p>
+        <p>추가적으로, 대규모 단체 예약(30명 이상)에서는 사전 현장 검증 회의를 진행해 좌석 배치와 장비 배치를 최적화합니다. 반대로 소규모(5명 이하) 예약에서는 즉시 조정 가능한 라운드 테이블 옵션을 준비해 유연성을 확보합니다. 이러한 세분화된 대응 전략은 고객 만족도와 비용 효율성을 동시에 달성하도록 돕습니다.</p>
+    </section>
+
+    <section data-v="settlement-procedure" class="card">
+        <h2>마무리 정산 절차</h2>
+        <p>가라오케 이용 종료 후 정산은 정확성과 신속성이 핵심입니다. 정산 단계는 크게 네 가지로 구분됩니다.</p>
+        <p>① 이용 시간 및 추가 주문(음료·음식·추가 장비) 집계<br>
+        ② 결제 방식(현금·카드·사전 결제)의 확인 및 영수증 발행<br>
+        ③ 회계 부서와의 전자 데이터 연동(자동 전표 생성)<br>
+        ④ 고객에게 최종 정산 내역을 이메일·문자로 전달하고, 필요 시 사후 피드백 설문을 제공</p>
+        <p>각 단계마다 담당자별 검증 체크리스트를 마련해 두면 오류를 최소화할 수 있습니다. 예를 들어, 이용 시간은 시스템 로그와 현장 매니저 기록을 비교하고, 추가 주문은 POS 시스템과 재고 관리 시스템을 교차 검증합니다. 최종 정산 보고서는 PDF 형태로 자동 생성돼 내부 감사를 위한 보관용으로도 활용됩니다.</p>
+    </section>
+
+    <section data-v="faq" class="card">
+        <h2>자주 묻는 질문</h2>
+        <p><strong>Q1. 예약 취소 시 환불 정책은 어떻게 되나요?</strong><br>
+        예약 24시간 이전 취소는 전액 환불이며, 24시간 이내 취소는 30% 수수료가 부과됩니다. 단, 대규모 단체 예약은 별도 협의가 필요합니다.</p>
+        <p><strong>Q2. 인원 초과 시 추가 비용은 어떻게 산정하나요?</strong><br>
+        인원당 1시간 기준 5,000원의 추가 요금을 적용합니다. 초과 인원이 10명 이상일 경우, 추가 장비(마이크·스피커) 비용을 별도로 청구합니다.</p>
+        <p><strong>Q3. 현장에 특별히 준비해야 할 장비가 있나요?</strong><br>
+        고객이 요청한 맞춤형 장비(전동 마이크·대형 스크린)는 사전 예약 시 별도 견적을 제시하며, 현장 담당자는 장비 설치 및 시연 절차를 사전에 검증해야 합니다.</p>
+    </section>
+
+    <footer>
+        <p>© 2026 화곡 가라오케 예약 가이드. 모든 권리 보유.</p>
+    </footer>
 </body>
 </html>
